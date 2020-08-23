@@ -4,17 +4,27 @@
   "description": "Simple User creation with TDD approach",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha 'src/tests/**/*.spec.js' --timeout 10000 --exit",
+    "lint": "eslint ./src --fix"
   },
   "keywords": [],
   "author": "Sathyesh Selvrajah",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "chai": "^4.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "http-errors": "^1.8.0",
     "mocha": "^8.1.1",
     "mongoose": "^5.10.0",
     "nyc": "^15.1.0",
     "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
   }
 }
