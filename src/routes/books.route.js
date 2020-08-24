@@ -9,6 +9,8 @@ router
   .post(controller.createBook);
 router
   .route('/:isbn')
-  .get(controller.getBook);
+  .get(controller.getBook)
+  .put(controller.updateBook)
+  .delete(controller.deleteBook);
 
 module.exports = router;

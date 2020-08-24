@@ -1,7 +1,7 @@
-require('dotenv/config');
+const { apiVersion } = require('../../config');
 
-const USERS_API = `${process.env.API_VERSION}/api/users`;
-const BOOKS_API = `${process.env.API_VERSION}/api/books`;
+const USERS_API = `/${apiVersion}/api/users/`;
+const BOOKS_API = `/${apiVersion}/api/books/`;
 
 module.exports = {
   USERS_API,

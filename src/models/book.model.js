@@ -13,11 +13,6 @@ const bookSchema = new mongoose.Schema({
     minlength: 1,
     maxlength: 255,
   },
-  available_status: {
-    type: Boolean,
-    required: false,
-    default: false,
-  },
   available_copies: {
     type: Number,
     required: false,
