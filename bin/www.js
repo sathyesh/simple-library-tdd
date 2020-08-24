@@ -3,15 +3,15 @@
 /**
  * Module dependencies.
  */
-require('dotenv/config');
 const http = require('http');
+const { port } = require('../config');
 const app = require('../src/app');
 
 /**
  * Get port from environment and store in Express.
  */
-const port = 3000;
-app.set('port', process.env.PORT || port);
+
+app.set('port', port || 3000);
 
 /**
  * Create HTTP server.
