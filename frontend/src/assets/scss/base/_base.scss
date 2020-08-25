@@ -12,14 +12,17 @@ h1{
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.5;
-
 }
 
 h2{
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
   line-height: 1.5;
+  color: #2a9d8f;
+  display: inline-block;
+  padding: 3px;
 }
+
 
 #app {
   -webkit-font-smoothing: antialiased;

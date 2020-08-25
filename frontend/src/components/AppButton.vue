@@ -1,5 +1,5 @@
 <template>
-  <button class="app-button">
+  <button class="app-button" :style="{ backgroundColor }">
       <template v-if="isLoading">
        <img class="app-button__img" :src="url"/>
       </template>
@@ -18,6 +18,10 @@ export default {
     value: {
       type: String,
       default: 'Title',
+    },
+    backgroundColor: {
+      type: String,
+      default: '#495057',
     },
     isLoading: {
       type: Boolean,

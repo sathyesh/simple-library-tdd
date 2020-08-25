@@ -1,8 +1,10 @@
 .app-card {
     width: 300px;
+    height: 100%;
     position: relative;
     box-shadow: 0 2px 7px #dfdfdf;
     background: $tertiary-color;
+
     &__container{
         padding: 30px;
     } 

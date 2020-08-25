@@ -1,12 +1,12 @@
 [
     {
-      "name": "User1",
+      "name": "John Doe",
       "email": "user1@user.com",
       "password": "5f452a3e0f962b8ea4f26c7e",
       "books_borrowed": []
     },
     {
-      "name": "User2",
+      "name": "Jane Doe",
       "email": "user2@user.com",
       "password": "5f452a3e0f962b8ea4f26c7e",
       "books_borrowed": []
