@@ -1,0 +1,14 @@
+{
+  "name": "production-ready-app-files",
+  "version": "1.0.0",
+  "description": "This project is used to run the frontend files directly using serve server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sathyesh Selvarajah",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^11.3.2"
+  }
+}
