@@ -27,7 +27,7 @@ mongoose.connect('mongodb://localhost/LibraryDB', {
   });
 
 app.get('/', (req, res) => {
-  res.send('Library REST API Server is running');
+  res.send({ message: 'Library REST API Server is running'});
 });
 
 // REST API for Users and Books

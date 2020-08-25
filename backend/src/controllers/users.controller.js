@@ -15,11 +15,11 @@ module.exports.getUser = async (req, res) => {
 };
 
 module.exports.createUser = async (req, res) => {
-  console.log(req.body);
   const user = new User({
     name: req.body.name,
     email: req.body.email,
-    gender: req.body.gender,
+    password: req.body.password,
+    books_borrowed: req.body.books_borrowed,
   });
   await user.save();
   return res.send(user);

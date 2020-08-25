@@ -21,7 +21,6 @@ module.exports.getBook = async (req, res) => {
   const book = await Book.findOne({
     isbn,
   });
-  console.log('book', book);
   if (book === null) {
     return res.status(404).send('Book not found');
   }
@@ -36,7 +35,6 @@ module.exports.updateBook = async (req, res) => {
 };
 
 module.exports.deleteBook = async (req, res) => {
-  const { isbn } = req.params;
-  await Book.findOneAndDelete(isbn);
+  await Book.findOneAndRemove({ isbn: req.params.isbn });
   return res.send('Book deleted');
 };
