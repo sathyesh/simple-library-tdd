@@ -1,0 +1,62 @@
+[
+    {
+      "isbn": "ISBN00001",
+      "title": "JavaScript",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!",
+      "available_copies": 2
+    },
+    {
+      "isbn": "ISBN00002",
+      "title": "Vue JS",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!",
+      "available_copies": 1
+    },
+    {
+      "isbn": "ISBN00003",
+      "title": "Angular JS",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!",
+      "available_copies": 1
+    },
+    {
+      "isbn": "ISBN00004",
+      "title": "React JS",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!",
+      "available_copies": 1
+    },
+    {
+      "isbn": "ISBN00005",
+      "title": "Express JS",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!",
+      "available_copies": 1
+    },
+    {
+      "isbn": "ISBN00006",
+      "title": "Java",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!",
+      "available_copies": 1
+    },
+    {
+      "isbn": "ISBN00007",
+      "title": "Mongo DB",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!",
+      "available_copies": 1
+    },
+    {
+      "isbn": "ISBN00008",
+      "title": "Webpack",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!",
+      "available_copies": 1
+    },
+    {
+      "isbn": "ISBN00009",
+      "title": "SASS",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!",
+      "available_copies": 1
+    },
+    {
+        "isbn": "ISBN00010",
+        "title": "HTML5 & CSS3",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!",
+        "available_copies": 1
+      }
+  ]

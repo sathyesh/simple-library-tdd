@@ -1,0 +1,20 @@
+[
+    {
+      "name": "User1",
+      "email": "user1@user.com",
+      "password": "5f452a3e0f962b8ea4f26c7e",
+      "books_borrowed": []
+    },
+    {
+      "name": "User2",
+      "email": "user2@user.com",
+      "password": "5f452a3e0f962b8ea4f26c7e",
+      "books_borrowed": []
+    },
+    {
+      "name": "User3",
+      "email": "user3@user.com",
+      "password": "5f452a3e0f962b8ea4f26c7e",
+      "books_borrowed": []
+    }
+  ]
