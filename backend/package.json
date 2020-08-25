@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "node bin/www",
     "test": "mocha 'src/tests/**/*.spec.js' --timeout 10000 --exit",
-    "lint": "eslint ./src --fix"
+    "lint": "eslint ./src --fix",
+    "coverage": "nyc --reporter=html --reporter=text mocha 'src/tests/**/*.spec.js' --timeout 10000 --exit"
   },
   "keywords": [],
   "author": "Sathyesh Selvrajah",

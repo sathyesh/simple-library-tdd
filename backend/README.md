@@ -5,14 +5,19 @@
 npm install
 ```
 
-### Run your Developement Server
+### Run Developement Server
 ```
 npm run dev
 ```
 
-### Run your unit tests
+### Run unit tests
 ```
 npm run test
+```
+
+### Run Code coverage
+```
+npm run coverage
 ```
 
 ### Lints and fixes files
