@@ -1,9 +1,10 @@
 {
-  "name": "simple-tdd-with-express",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "Simple User creation with TDD approach",
+  "description": "Backend Server for simple library",
   "main": "index.js",
   "scripts": {
+    "dev": "node bin/www",
     "test": "mocha 'src/tests/**/*.spec.js' --timeout 10000 --exit",
     "lint": "eslint ./src --fix"
   },
