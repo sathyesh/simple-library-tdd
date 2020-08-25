@@ -1,0 +1,29 @@
+.app-card {
+    width: 300px;
+    position: relative;
+    box-shadow: 0 2px 7px #dfdfdf;
+    background: $tertiary-color;
+    &__container{
+        padding: 30px;
+    } 
+    &__header {
+        font-weight: 600;
+        display: block;
+        margin-bottom: $default-margin-size;
+        color: $primary-font-color;
+        transition: 0.3s;
+    }
+    
+    &__body {
+        font-size: 0.80rem;
+        line-height: 1rem;
+        margin-bottom: $default-margin-size;
+        color: $tertiary-font-color;
+    }   
+    &__footer {
+        overflow: hidden;
+        border-top: 1px solid #eee;
+        padding-top: $default-padding-size;
+        @include flex-default;
+    }
+}

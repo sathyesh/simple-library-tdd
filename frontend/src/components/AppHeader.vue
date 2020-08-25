@@ -1,7 +1,7 @@
 <template>
   <header class="app-header">
-    <div class="container">
-        <h1>{{ title }}</h1>
+    <div class="app-header__container">
+        <h1 class="app-header__title">{{ title }}</h1>
     </div>
   </header>
 </template>

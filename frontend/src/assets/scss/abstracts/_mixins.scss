@@ -1,0 +1,17 @@
+@mixin container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-default {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-direction: row;
+}

@@ -8,8 +8,17 @@ body {
   font-size: $base-font-size;
 }
 
-h1 {
+h1{
   font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+
+}
+
+h2{
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 #app {
@@ -20,8 +29,3 @@ h1 {
   width: 100%;
 }
 
-.container {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}

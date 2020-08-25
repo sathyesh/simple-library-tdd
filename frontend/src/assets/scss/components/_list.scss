@@ -1,0 +1,15 @@
+.app-list{
+    &__container{
+        @include flex-default;
+        flex-wrap: wrap;
+    }
+    &__message{
+        font-size: .95rem;
+        padding-top: $default-padding-size;
+    }
+    &__item {
+        margin-right: $default-margin-size;
+        margin-top: $default-margin-size;
+        flex: 0 0 22%;
+    }
+}

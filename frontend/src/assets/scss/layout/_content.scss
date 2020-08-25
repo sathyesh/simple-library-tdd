@@ -1,5 +1,23 @@
 .app-main-content {
-  background-color: $primary-color;
-  min-height: 100%;
-  padding-top: 5rem;
+  height: 100%;
+  @include container;
+  &__container{
+    padding: calc(#{$default-padding-size}*2) 0;
+  }
+}
+
+.availability {
+  float: left;
+  margin-left: auto;
+  font-size: 0.72rem;
+  align-self: center;
+  color: $tertiary-font-color;
+  padding: 5px;
+  font-weight: 700;
+  &__number{
+    padding: 5px;
+    font-size: 0.90rem;
+    color: $primary-font-color;
+  }
+
 }

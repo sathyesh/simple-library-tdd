@@ -1,8 +1,18 @@
 @import "abstracts/variables"; // contains SCSS color variables
+@import "abstracts/mixins"; // contains reusable mixins
+
 @import "base/reset"; // contains reset CSS ( to improve cross-browser rendering)
 @import "base/typography"; // contains font family and font sizes
 @import "base/base"; // contains html,body and global SCSS rules
 
-@import "layout/header"; // contains header element SCSS rules
-// @import "layout/content"; // contains content element SCSS rules
+@import "layout/content"; // contains main section SCSS rules
+
+@import "components/header"; // contains header element SCSS rules
+@import "components/list"; // contains list element SCSS rules
+@import "components/card"; // contains card element SCSS rules
+@import "components/button"; // contains button element SCSS rules
+
+
+
+
 

@@ -1,9 +1,14 @@
 <template>
   <ul class="app-list__container">
-      <p v-if="listItems.length === 0"> {{ errorMsg }}</p>
-      <template v-else>
-        <li v-for="(item,index) in listItems" :key="index">
-          {{item.title}}
+      <p class="app-list__message" v-if="listItems.length === 0"> {{ errorMsg }}</p>
+      <template v-else v-for="(item,index) in listItems">
+        <li class="app-list__item" :key="index"
+          v-if="listType === 'borrow' && item.available_copies > 0">
+           <slot v-bind:item="item"></slot>
+        </li>
+         <li class="app-list__item" :key="index"
+          v-if="listType === 'return'">
+           <slot v-bind:item="item"></slot>
         </li>
       </template>
   </ul>
@@ -13,6 +18,10 @@
 export default {
   name: 'AppList',
   props: {
+    listType: {
+      type: String,
+      default: 'borrow',
+    },
     listItems: {
       type: Array,
       default: () => [
@@ -20,11 +29,15 @@ export default {
           isbn: 'ISBN0001',
           title: 'Book1',
           available_copies: 1,
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!',
+          loading: false,
         },
         {
           isbn: 'ISBN0002',
           title: 'Book2',
           available_copies: 2,
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!',
+          loading: false,
         }],
     },
     errorMsg: {
@@ -37,8 +50,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.books-list__container{
-    padding: 0 10px;
-    border: 1px red solid;
-}
 </style>
