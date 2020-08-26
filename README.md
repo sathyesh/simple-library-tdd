@@ -15,7 +15,7 @@
 
 ### Built With
 
-[![Express.js](https://img.shields.io/badge/Express.js-4.x-orange.svg?style=rounded-square)](https://expressjs.com/en/starter/installing.html) [![Node.js](https://img.shields.io/badge/Node.js-v.12.16-green.svg?style=rounded-square)](https://nodejs.org/) [![MongoDB](https://img.shields.io/badge/mongoose-v5.10.0-blue)](https://www.npmjs.com/search?q=mongoose)
+[![Express.js](https://img.shields.io/badge/Express.js-4.17.1-orange.svg?style=rounded-square)](https://expressjs.com/en/starter/installing.html) [![Node.js](https://img.shields.io/badge/Node.js-v.12.14.0-green.svg?style=rounded-square)](https://nodejs.org/) [![Mongoose](https://img.shields.io/badge/Mongoose-v5.10.0-blue)](https://www.npmjs.com/search?q=mongoose) [![Mocha](https://img.shields.io/badge/Mocha-v8.1.1-blue)](https://www.npmjs.com/search?q=mocha)
 
 <a name="#assumptions"></a>
 
@@ -26,6 +26,7 @@
 - Number of available copies is maintained in the Book object. if the available copy is 0, hence the book is not available
 - Borrowing and return history of Users and Books is not supported
 - User Authentication, registration and oAuth is not supported
+- 80% of the code is developed with TDD
 
 ### Development Docs
 
@@ -209,15 +210,20 @@
 - [Source Code](#source-code)
 - [Unit Test](#unit-test)
 
+### Built With
+
+[![Vue.js](https://img.shields.io/badge/Vue.js-2.6.11-orange.svg?style=rounded-square)](https://www.npmjs.com/search?q=vue.js) [![Node.js](https://img.shields.io/badge/Node.js-v.12.14.0-green.svg?style=rounded-square)](https://nodejs.org/) [![Mocha](https://img.shields.io/badge/Mocha-v8.1.1-blue)](https://www.npmjs.com/search?q=mocha)
+
 <a name="#dev-assumptions"></a>
 
-### Development Assumptions
+### Development Assumptions and Issues
 
 - At first, thought of hosting the backend in AWS, because of limited time, I could not able to do that
 - Currently used local json for user stories development
 - Followed the same Data model as MongoDB
 - All the user stories are implemented
 - For quick running, please follow [Local Hosting Procedure](#local-hosting-procedure)
+- only 40% of the code is developed with TDD
 
 <a name="#local-hosting-procedure"></a>
 
