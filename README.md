@@ -15,26 +15,34 @@
 
 ### Built With
 
-[![Express.js](https://img.shields.io/badge/Express.js-4.x-orange.svg?style=rounded-square)](https://expressjs.com/en/starter/installing.html) [![Node.js](https://img.shields.io/badge/Node.js-v.10.16-green.svg?style=rounded-square)](https://nodejs.org/) [![MongoDB](https://img.shields.io/badge/mongoose-v5.10.0-blue)](https://www.npmjs.com/search?q=mongoose)
+[![Express.js](https://img.shields.io/badge/Express.js-4.x-orange.svg?style=rounded-square)](https://expressjs.com/en/starter/installing.html) [![Node.js](https://img.shields.io/badge/Node.js-v.12.16-green.svg?style=rounded-square)](https://nodejs.org/) [![MongoDB](https://img.shields.io/badge/mongoose-v5.10.0-blue)](https://www.npmjs.com/search?q=mongoose)
 
 <a name="#assumptions"></a>
 
 ### Architectural Assumptions
-
-- Not supporting any borrowing and return history of Users and Books
-- User and Books CRUD operations only supported
-- User Authentication, registration and oAuth is not supported
+- Created the REST API service using microservice architecture approach
+- User and Books CRUD operations is supported
 - Each user's books borrowed list is saved in the User object
 - Number of available copies is maintained in the Book object. if the available copy is 0, hence the book is not available
-- Created the REST API service using microservice architecture approach
+- Borrowing and return history of Users and Books is not supported
+- User Authentication, registration and oAuth is not supported
 
 ### Development Docs
 
 - Read the further instructions in [README.md](/backend/README.md) for running and testing the application using development server
 
+
+### Unit Test
+
+!["unit_test.png"](/backend/docs/images/unit_test.png)
+
+### Code Coverage
+
+!["code_coverage.png"](/backend/docs/images/code_coverage.png)
+
 ### End Points
 
-- Versioning is supported by using config.js
+- Versioning is supported and maintained using config.js
 
 #### **Homepage**
 
@@ -85,7 +93,7 @@
     "__v": 0
   }
   ```
-#### ** Updating User Information**
+#### **Updating User Information**
 
 - **Request** : **`PUT /v1/api/users/5f45894e0120bf5ac299ac52`**
 
@@ -158,7 +166,7 @@
     "__v": 0
    }
   ```
-#### ** Updating Book Information**
+#### **Updating Book Information**
 
 - **Request** : **`PUT /v1/api/books/ISBN001`**
 
@@ -196,9 +204,20 @@
 
 ## Frontend
 
+- [Development Assumptions](#dev-assumptions)
 - [Local Hosting Procedure](#local-hosting-procedure)
 - [Source Code](#source-code)
 - [Unit Test](#unit-test)
+
+<a name="#dev-assumptions"></a>
+
+### Development Assumptions
+
+- At first, thought of hosting the backend in AWS, because of limited time, I could not able to do that
+- Currently used local json for user stories development
+- Followed the same Data model as MongoDB
+- All the user stories are implemented
+- For quick running, please follow [Local Hosting Procedure](#local-hosting-procedure)
 
 <a name="#local-hosting-procedure"></a>
 
@@ -209,18 +228,18 @@ There are two ways available for the local hosting procedure.
 - Host using **serve** (https://github.com/vercel/serve) server for production-ready files
 - Host using framework development server for source codes
 
-Before doing local hosting, clone the repository and navigate to cloned folder(ict-postings-ui-sathyesh-selvarajah) through terminal
+Before doing local hosting, unzip the file and navigate to folder(simple-library-tdd) through terminal
 
 ```bash
-cd ict-postings-ui-sathyesh-selvarajah
+cd simple-library-tdd
 ```
 
 ### Host using serve server
 
-- Production-ready application files are available in app/production-ready-app-files under **_dist_** folder
+- Production-ready application files are available in frontend/production-ready-app-files under **_dist_** folder
 - Navigate there using following command
   ```bash
-  cd app/production-ready-app-files
+  cd frontend/production-ready-app-files
   ```
 - Install _serve_ using the following command
   ```bash
@@ -231,93 +250,23 @@ cd ict-postings-ui-sathyesh-selvarajah
   npm run production-ready
   ```
 - Application is available in http://localhost:8080
-- To do e2e testing using cypress, please follow the procedure which is present under root [tests](/tests/README.md) folder
 
 ### Host using framework development server
 
-- Read the further instructions in [README.md](/app/ict-postings-ui/README.md) for running the application using development server
+- Read the further instructions in [README.md](/frontend/README.md) for running the application using development server
 
 <a name="#source-code"></a>
 
 ### Source Code
 
-- Source code files are available under [src](/app/ict-postings-ui/src) folder
+- Source code files are available under [src](/frontend/src) folder
 
 <a name="#unit-test"></a>
 
 ### Unit Test
 
-- Unit test cases are available under [tests](/app/ict-postings-ui/tests) folder
+- Unit test cases are available under [tests](/frontend/tests) folder
 
-## Frontend
+### Screenshot
 
-- [Goal](#goal)
-- [User Stories](#user-stories)
-- [Scenario](#scenario)
-- [Wireframes](#wireframes)
-- [Public API](#public-api)
-
-<a name="#goal"></a>
-
-### Goal
-
-Develop production-ready application for candidates that displays a list and details of postings published by Smartrecruiters which are available via [SmartRecruiters Public API](#public-api).
-
-The application should:
-
-- implement [user stories](#user-stories)
-- pass [scenario](#scenario)
-- follow design guidelines from [wireframes](#wireframes)
-- pass [e2e tests](tests/README.md)
-
-<a name="#user-stories"></a>
-
-### User stories
-
-- as a candidate, I want to see list of postings published by SmartRecruiters
-- as a candidate, I want to filter postings published by SmartRecruiters by `location.country` and `department`
-- as a candidate, I want to see `jobAd.sections.jobDescription` and `jobAd.sections.jqualifications` of postings published by SmartRecruiters
-
-<a name="#scenario"></a>
-
-### Scenario
-
-1. Open `localhost:8080`
-2. Postings list loads
-3. Candidate filter list by country and department
-4. List displays only filtered elements
-5. Click an item on the list
-6. Posting details containing `jobAd.sections.jobDescription` and `jobAd.sections.jqualifications` section opens
-7. Click `backlink` to return to the list
-
-<a name="#wireframes"></a>
-
-### Wireframes
-
-#### List of postings published by SmartRecruiters
-
-!["sr-app-list-design.png"](media/sr-app-list-design.png)
-
-#### Posting details contatining `jobAd.sections.jobDescription` and `jobAd.sections.jqualifications` section
-
-!["sr-app-details-design.png"](media/sr-app-details-design.png)
-
-<a name="#public-api"></a>
-
-### Public API
-
-#### Get list of postings published by SmartRecruiters
-
-`GET https://api.smartrecruiters.com/v1/companies/smartrecruiters/postings`
-
-demo: https://reqbin.com/fjiq2zrg  
-documentation: https://dev.smartrecruiters.com/customer-api/posting-api/endpoints/postings/
-
-#### Get posting details
-
-`GET https://api.smartrecruiters.com/v1/companies/smartrecruiters/postings/{postingID}`
-
-demo: https://reqbin.com/sghcu97n  
-documentation: https://dev.smartrecruiters.com/customer-api/posting-api/endpoints/postingcontent/
-
-
+!["code_coverage.png"](/frontend/docs/images/application.png)

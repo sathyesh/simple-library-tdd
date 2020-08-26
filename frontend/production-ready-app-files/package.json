@@ -4,7 +4,7 @@
   "description": "This project is used to run the frontend files directly using serve server",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "production-ready": "npx serve -s dist -l 8080"
   },
   "author": "Sathyesh Selvarajah",
   "license": "MIT",
